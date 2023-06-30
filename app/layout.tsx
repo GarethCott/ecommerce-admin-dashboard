@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
+import { ModalProvider } from '@/providers/ModalProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,8 @@ export default function RootLayout({
         <html lang="en">
           <body className={inter.className}>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              {children}
+              <ModalProvider/>
+                {children}
             </ThemeProvider>
             </body>
         </html>
