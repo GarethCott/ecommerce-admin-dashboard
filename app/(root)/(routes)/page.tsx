@@ -15,12 +15,7 @@ const SetupPage = () => {
     }
   }, [isOpen,onOpen])
 
-  return (
-    <div className="p-4">
-      Root page
-      {/* <ModeToggle/> */}
-    </div>
-  )
+  return null;
 }
 
 export default SetupPage;

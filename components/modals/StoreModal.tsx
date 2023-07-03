@@ -35,7 +35,8 @@ export const StoreModal = () => {
 
         const response = await axios.post('/api/stores', values);
 
-        toast.success("Store created");
+        //using window.location to force a refresh of page to ensure databash is loaded fully
+        window.location.assign(`/${response.data.id}`);
 
       } catch (error) {
         toast.error("Something went wrong");
