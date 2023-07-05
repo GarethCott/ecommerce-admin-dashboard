@@ -1,4 +1,4 @@
-import SettingsForm from '@/components/SettingsForm';
+import SettingsForm from '@/app/(dashboard)/[storeId]/(routes)/settings/components/SettingsForm';
 import prismadb from '@/lib/prismadb';
 import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';

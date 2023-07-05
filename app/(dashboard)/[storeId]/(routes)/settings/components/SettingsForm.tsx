@@ -14,8 +14,8 @@ import { Input } from '@/components/ui/Input';
 import { toast } from 'react-hot-toast';
 import axios from 'axios';
 import { useParams, useRouter } from 'next/navigation';
-import AlertModal from './modals/AlertModal';
-import ApiAlert from './ui/ApiAlert';
+import AlertModal from '@/components/modals/AlertModal';
+import ApiAlert from '@/components/ui/ApiAlert';
 import useOrigin from '@/hooks/useOrigin';
 
 
