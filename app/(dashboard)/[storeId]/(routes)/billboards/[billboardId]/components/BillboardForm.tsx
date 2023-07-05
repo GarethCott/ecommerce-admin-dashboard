@@ -15,8 +15,6 @@ import { toast } from 'react-hot-toast';
 import axios from 'axios';
 import { useParams, useRouter } from 'next/navigation';
 import AlertModal from '@/components/modals/AlertModal';
-import ApiAlert from '@/components/ui/ApiAlert';
-import useOrigin from '@/hooks/useOrigin';
 import ImageUpload from '@/components/ui/ImageUpload';
 
 const formSchema = z.object({
@@ -33,7 +31,7 @@ interface BillboardFormProps {
 const BillboardForm: FC<BillboardFormProps> = ({
     initialData
 }) => {
-  const origin = useOrigin();
+
   const params = useParams()
   const router = useRouter()
   const [open, setOpen] = useState(false);
