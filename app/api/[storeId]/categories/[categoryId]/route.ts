@@ -108,7 +108,7 @@ export async function DELETE (
             return new NextResponse("Unauthorized", {status:403})
         }
 
-        const category = await prismadb.billboard.deleteMany({
+        const category = await prismadb.category.deleteMany({
             where: {
                 id: params.categoryId,
             }
