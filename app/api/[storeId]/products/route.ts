@@ -7,17 +7,43 @@ export async function POST(req:Request,
     try {
         const {userId} = auth();
         const body = await req.json();
-        const {label, imageUrl} = body
+        const {
+            name,
+            price,
+            categoryId,
+            colorId,
+            sizeId,
+            images,
+            isFeatured,
+            isArchived,
+
+        } = body
 
         if (!userId) {
             return new NextResponse('Unauthenticated', {status:401});
         }
-        if(!label) {
-            return new NextResponse('Label is required', {status:400});
+        if(!name) {
+            return new NextResponse('Name is required', {status:400});
         }
 
-        if(!imageUrl) {
-            return new NextResponse('Image Url is required', {status:400});
+        if(!images || !images.length) {
+            return new NextResponse("Images are required", {status:400})
+        }
+
+        if(!price) {
+            return new NextResponse('Price is required', {status:400});
+        }
+
+        if(!categoryId) {
+            return new NextResponse('Category Id is required', {status:400});
+        }
+
+        if(!sizeId) {
+            return new NextResponse('Size Id is required', {status:400});
+        }
+
+        if(!colorId) {
+            return new NextResponse('Color Id is required', {status:400});
         }
 
         if(!params.storeId) {
@@ -36,18 +62,30 @@ export async function POST(req:Request,
         }
 
         //Creating our store in prismadb
-        const billboard = await prismadb.billboard.create({
+        const product = await prismadb.product.create({
             data: {
-                label,
-                imageUrl,
-                storeId: params.storeId
+                name,
+                price,
+                isFeatured,
+                isArchived,
+                categoryId,
+                colorId,
+                sizeId,
+                storeId: params.storeId,
+                images: {
+                    createMany: {
+                        data: {
+                            ...images.map((image: {url:string})=> image)
+                        }
+                    }
+                }
             }
         });
 
-        return NextResponse.json(billboard)
+        return NextResponse.json(product)
 
     } catch (error) {
-        console.log('[billboard_POST]', error)
+        console.log('[PRODUCTS_POST]', error)
         return new NextResponse('Internal error', {status:500});
     }
 }

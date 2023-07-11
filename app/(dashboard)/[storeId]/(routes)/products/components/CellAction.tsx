@@ -1,6 +1,6 @@
 "use client"
 import { FC, useState } from 'react'
-import { BillboardColumn } from './Columns'
+import { ProductColumn } from './Columns'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/DropdownMenu';
 import { Button } from '@/components/ui/Button';
 import { Copy, Edit, MoreHorizontal, Trash } from 'lucide-react';
@@ -10,7 +10,7 @@ import axios from 'axios';
 import AlertModal from '@/components/modals/AlertModal';
 
 interface CellActionProps {
-  data: BillboardColumn;
+  data: ProductColumn;
 }
 
 const CellAction: FC<CellActionProps> = ({
