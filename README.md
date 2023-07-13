@@ -1,8 +1,8 @@
-## Ecommerce website
+# Ecommerce website
 This is still in development.
 This is a eccommerce backend full CRUD website.
 
-# Technologies used
+## Technologies used
 Axios 
 Planetscale (database)
 Clerk (User authentication)
