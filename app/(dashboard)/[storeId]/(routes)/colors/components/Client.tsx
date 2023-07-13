@@ -11,11 +11,11 @@ import { ColorColumn, columns } from "./Columns"
 import { DataTable } from "@/components/ui/DataTable"
 import ApiList from "@/components/ui/ApiList"
 
-interface ColorsClientProps {
+interface ColorClientProps {
   data: ColorColumn[];
 }
 
-const ColorsClient: FC<ColorsClientProps> = ({data}) => {
+const ColorClient: FC<ColorClientProps> = ({data}) => {
 
   const router = useRouter()
     const params = useParams()
@@ -31,11 +31,11 @@ const ColorsClient: FC<ColorsClientProps> = ({data}) => {
             </div>
             <Separator/>
             <DataTable searchKey="name" columns={columns} data={data}/>
-            <Heading title="API" description="API calls for COlors"/>
+            <Heading title="API" description="API calls for Colors"/>
             <Separator/>
             <ApiList enitiyName="colors" enityIdName="colorId"/>
         </>
     )
 }
 
-export default ColorsClient
+export default ColorClient
