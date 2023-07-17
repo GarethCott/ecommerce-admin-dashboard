@@ -8,7 +8,7 @@ import { FC } from 'react'
 import { BillboardColumn, columns } from "./Columns"
 import { DataTable } from "@/components/ui/DataTable"
 import ApiList from "@/components/ui/ApiList"
-import { Button } from "@/components/ui/Button"
+import { Button } from "@/components/ui/button"
 
 interface ClientProps {
   data: BillboardColumn[];

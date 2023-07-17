@@ -17,7 +17,7 @@ import AlertModal from '@/components/modals/AlertModal';
 import ImageUpload from '@/components/ui/ImageUpload';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select';
 import { Checkbox } from '@/components/ui/Checkbox';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 const formSchema = z.object({
   name: z.string().min(1),

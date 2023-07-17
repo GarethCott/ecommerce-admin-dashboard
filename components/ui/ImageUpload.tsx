@@ -1,7 +1,7 @@
 "use client"
 
 import { FC, useEffect, useState } from 'react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { ImagePlus, Trash } from 'lucide-react'
 import Image from 'next/image'
 import { CldUploadWidget } from 'next-cloudinary'

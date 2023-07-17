@@ -15,7 +15,7 @@ import axios from 'axios';
 import { useParams, useRouter } from 'next/navigation';
 import AlertModal from '@/components/modals/AlertModal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 const formSchema = z.object({
   name: z.string().min(1),

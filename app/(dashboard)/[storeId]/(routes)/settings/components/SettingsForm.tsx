@@ -16,7 +16,7 @@ import { useParams, useRouter } from 'next/navigation';
 import AlertModal from '@/components/modals/AlertModal';
 import ApiAlert from '@/components/ui/ApiAlert';
 import useOrigin from '@/hooks/useOrigin';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 interface SettingsFormProps {
   initialData: Store;
