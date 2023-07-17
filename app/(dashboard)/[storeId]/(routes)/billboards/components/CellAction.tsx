@@ -2,12 +2,12 @@
 import { FC, useState } from 'react'
 import { BillboardColumn } from './Columns'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/DropdownMenu';
-import { Button } from '@/components/ui/Button';
 import { Copy, Edit, MoreHorizontal, Trash } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
 import AlertModal from '@/components/modals/AlertModal';
+import { Button } from '@/components/ui/Button';
 
 interface CellActionProps {
   data: BillboardColumn;

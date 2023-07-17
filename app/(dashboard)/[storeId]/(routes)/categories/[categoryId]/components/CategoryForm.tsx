@@ -3,7 +3,6 @@
 import { Billboard, Category } from '@prisma/client';
 import { FC, useState } from 'react'
 import Heading from '@/components/ui/Heading';
-import { Button } from '@/components/ui/Button';
 import { Trash } from 'lucide-react';
 import { Separator } from '@/components/ui/Separator';
 import * as z from 'zod'
@@ -16,6 +15,7 @@ import axios from 'axios';
 import { useParams, useRouter } from 'next/navigation';
 import AlertModal from '@/components/modals/AlertModal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select';
+import { Button } from '@/components/ui/Button';
 
 const formSchema = z.object({
   name: z.string().min(1),

@@ -3,7 +3,6 @@
 import { Store } from '@prisma/client';
 import { FC, useState } from 'react'
 import Heading from '@/components/ui/Heading';
-import { Button } from '@/components/ui/Button';
 import { Trash } from 'lucide-react';
 import { Separator } from '@/components/ui/Separator';
 import * as z from 'zod'
@@ -17,7 +16,7 @@ import { useParams, useRouter } from 'next/navigation';
 import AlertModal from '@/components/modals/AlertModal';
 import ApiAlert from '@/components/ui/ApiAlert';
 import useOrigin from '@/hooks/useOrigin';
-
+import { Button } from '@/components/ui/Button';
 
 interface SettingsFormProps {
   initialData: Store;

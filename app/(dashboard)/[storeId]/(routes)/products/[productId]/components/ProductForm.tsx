@@ -3,7 +3,6 @@
 import { Category, Color, Image, Product, Size } from '@prisma/client';
 import { FC, useState } from 'react'
 import Heading from '@/components/ui/Heading';
-import { Button } from '@/components/ui/Button';
 import { Trash } from 'lucide-react';
 import { Separator } from '@/components/ui/Separator';
 import * as z from 'zod'
@@ -18,6 +17,7 @@ import AlertModal from '@/components/modals/AlertModal';
 import ImageUpload from '@/components/ui/ImageUpload';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select';
 import { Checkbox } from '@/components/ui/Checkbox';
+import { Button } from '@/components/ui/Button';
 
 const formSchema = z.object({
   name: z.string().min(1),
