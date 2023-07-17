@@ -1,8 +1,5 @@
 "use client"
-import { ModeToggle } from "@/components/ui/LightDarkMode";
-import Modal from "@/components/ui/Modal";
 import useStoreModal from "@/hooks/useStoreModal";
-import { UserButton } from "@clerk/nextjs";
 import { useEffect } from "react";
 
 const SetupPage = () => {
