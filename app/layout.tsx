@@ -21,11 +21,11 @@ export default function RootLayout({
       <ClerkProvider>
         <html lang="en">
           <body className={inter.className}>
-            {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
-              <ToasterProvider/>
-              <ModalProvider/>
-                {children}
-            {/* </ThemeProvider> */}
+              <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+                <ToasterProvider/>
+                <ModalProvider/>
+                  {children}
+              </ThemeProvider>
             </body>
         </html>
       </ClerkProvider>
