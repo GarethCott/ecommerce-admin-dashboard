@@ -1,6 +1,6 @@
-# Ecommerce Website
+# E-commerce Website
 
-> This is an ecommerce website project consisting of the backend dashboard.
+> This is an e-commerce website project consisting of the backend dashboard.
 
 - [Website](https://ecommerce-admin-dashboard-chi.vercel.app)
 
