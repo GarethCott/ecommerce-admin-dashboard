@@ -8,12 +8,12 @@
 
 ## Table of Contents
 
-- [Backend](#backend)
+- [Frontend](#frontend)
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies](#technologies)
 
-## Backend
+## Frontend
 
 - [Frontend store](https://ecommerce-store-liart-one.vercel.app/)
 
